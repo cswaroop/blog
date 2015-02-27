@@ -12,3 +12,6 @@ This is also known as stream processing or complex event processing (CEP) in Ent
 3. Apache Spark Streaming
 
 Unlike batch-processing which is throughput-oriented, real-time processing systems are latency-oriented.  They have strict-timeouts and fault-tolerance with no accuracy guarantees.  Events may be dropped, sequence-altered, double counted etc. but in practice its taken care with batch Ids and compensations built-in.
+
+Lambda Architecture vs. K architecture
+--------------------------------------
