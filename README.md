@@ -1,9 +1,15 @@
 # blog
 
-Web Application Development
+Web Application and Web Services Development
 
 * [Single Page Applications] (spa.md)
 * [Micro-Services Architecture] (microservices.md)
+* SaaS
+
+Mobile Application Development
+* Android
+* IOS
+* Windows
 
 Data Integration and Analytics Platforms
 
