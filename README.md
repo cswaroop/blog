@@ -11,11 +11,12 @@ Mobile Application Development
 * IOS
 * Windows
 
-Data Integration and Analytics Platforms
+Data Integration and Processing Platforms
 
 * [Real-time Data Processing] (real-time-data-processing.md)
 * [Big Data]
 
+[Data Sciences] (datasciences.md)
 Deployment
 
 * Amazon AWS
