@@ -1,4 +1,6 @@
-# Joy of Clojure, 2nd edition
+# My Clojure Nots reading Joy of Clojure, 2nd edition
+
+Amazing book. check it out.
 
 ##Basics
 
