@@ -1,6 +1,8 @@
 # My Clojure Nots reading Joy of Clojure, 2nd edition
 
-Amazing book. check it out.
+Amazing book. check it out. First wounderful quotes from the book
+
+
 
 ##Basics
 
@@ -466,3 +468,120 @@ Function Parameter destructuring
 
 
 ```
+
+### Collections
+
+> Its better to have 100 functions operate on one data structure than 10 functions on 10 data structures -- Alan Perlis
+
+Native clojure collections - Vectors, Lists, Maps, Sets, Queues
+Java collections - Arrays, LinkedBlockedQueue
+
+
+What is persistent data structure means?
+
+Where Immutable collections becomes affordable in practical programming.
+
+```clojure
+
+(def ds (into-array [:a :b :c]))
+(seq ds)
+
+(aset ds 1 :q)  ; changes the arrary in-place!
+
+```
+
+
+But when it comes Clojure native data types like vector
+
+``` 
+
+(def ds [:a :b :c])
+(def ds2 (replace {:b :q} ds))
+
+
+```
+
+Note the `replace` function.  It doesn't really replace in original datastructure; instead creates one; Just like locals are not variables.
+
+#### Seq API
+
+first, rest, nil and () makes up the seq API.
+
+`seq` is an implemention of this API
+
+`(seq [])` returns nil
+`(seq [1 2])` returns (1 2)
+
+
+`(= [1 2 3] '(1 2 3))` returns true
+
+
+### `vec` vs `vector`
+
+`(doc vec)`
+`(doc vector)`
+
+
+(vec (range 10))
+
+If you already have a vector, but want to pour several values into it then `into` is your friend.
+
+(let [v [:a :b :c]]
+  (into v (range 10)))
+;[:a :b :c 0 1 2 3 4 5 6 7 8 9]
+
+`into` adds at the begining of vector (o(n) complexity),  where as `cons` adds at the end of vector.
+
+
+#### Large Vectors
+
+Relative to lists, vectors have the following advantages
+
+* Adding and removing at the right side
+* Accessing/changing in the collection by index
+* Walking in reverse order
+
+
+Length of the vector  by
+
+`(count [1 2 3])`
+
+indexed from `[0 count)` and index accessed by `nth` or `get` or by using vector itself as function
+
+`(nth [1 2 3] 1)`
+`(get [1 2 3] 1)`
+`([1 2 3] 1)`
+
+try the above with `nil` and out-of-range index; a default behaviour can be attached for out-of-range situation
+
+`(nth [] 9 :oops)`
+`(get [] 9 :oops)`
+
+Traverse left to right (or) right to left
+
+`(seq [1 2 3])`
+`(rseq [1 2 3])`
+
+Update/addition of any one element with `assoc` (O(1) complexity)
+
+`(assoc [1 2 3] 2 100)`
+`(assoc [1 2 3] 3 100)`
+
+#### Clojure Libraries
+
+Machine Learning
+
+1. [Incanter](http://incanter.org) is a R-like statistical computing environment
+2. 
+
+Big Data Processing
+
+1. [Cascalog] for Batch processing
+2. [Storm] for Realtime Data processing
+
+
+Web Application
+
+1. [om] for building Single Page Apps using Facebook React
+2. ClojureScript 
+
