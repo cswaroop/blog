@@ -1,7 +1,8 @@
 # My Clojure Nots reading Joy of Clojure, 2nd edition
 
-Amazing book. check it out. First wounderful quotes from the book
+Amazing book. check it out.
 
+Clojure brings back the fun in programming even to enterprise (J2EE) zombies
 
 
 ##Basics
